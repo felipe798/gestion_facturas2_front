@@ -1,0 +1,74 @@
+/* Estilo general */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+.notificaciones-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Título */
+.notificaciones-title {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Sección de facturas */
+.facturas-section {
+    margin-top: 10px;
+}
+
+/* Lista de facturas */
+.facturas-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.factura-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s ease;
+}
+
+.factura-item:hover {
+    background-color: #f9f9f9;
+}
+
+.factura-nombre {
+    font-weight: bold;
+    color: #555;
+}
+
+.factura-count {
+    color: #888;
+    font-size: 14px;
+}
+
+/* Mensaje de error */
+.error-message {
+    color: red;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Sin facturas */
+.no-facturas {
+    text-align: center;
+    color: #666;
+    font-size: 16px;
+}

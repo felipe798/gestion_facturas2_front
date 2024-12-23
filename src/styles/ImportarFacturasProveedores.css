@@ -1,0 +1,124 @@
+.importar-facturas {
+    font-family: Arial, sans-serif;
+    color: #e0e0e0;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.title, .filter-title, .section-title {
+    color: #00aa33; /* Verde fluorescente oscuro */
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.upload-form, .filter-container {
+    margin-bottom: 20px;
+}
+
+.file-input {
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #2a2a2a;
+    color: #fff;
+}
+
+.upload-button {
+    margin-left: 10px;
+    background-color: #00aa33;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.upload-button:hover {
+    background-color: #007f26;
+    box-shadow: 0 0 10px #00aa33;
+}
+
+.filter-input, .filter-select, .estado-select {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #2a2a2a;
+    color: #fff;
+}
+
+.facturas-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.facturas-table th, .facturas-table td {
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #444;
+    color: #fff;
+}
+
+.facturas-table th {
+    background-color: #00aa33; /* Verde fluorescente oscuro */
+}
+
+.facturas-table tr:nth-child(odd) {
+    background-color: #333;
+}
+
+.facturas-table tr:hover {
+    background-color: #444;
+    transform: scale(1.01);
+    transition: all 0.3s ease;
+}
+
+.action-button {
+    background-color: #00aa33;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: #007f26;
+}
+
+/* Nuevos estilos para los botones de paginación */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination-button {
+    background-color: #00aa33;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pagination-button:hover {
+    background-color: #007f26;
+    box-shadow: 0 0 10px #00aa33;
+}
+
+.pagination-button.active {
+    background-color: #007f26;
+    box-shadow: 0 0 10px #00aa33;
+}
+
+.pagination-button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}

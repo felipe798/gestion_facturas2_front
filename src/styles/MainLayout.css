@@ -1,0 +1,178 @@
+/* Estilo general */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5; /* Fondo general */
+}
+
+/* Encabezado */
+header {
+  background-color: #181818; /* Fondo oscuro del encabezado */
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed; /* Fija el encabezado en la parte superior */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Asegura que el encabezado esté encima de otros elementos */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  flex-wrap: wrap; /* Permite que los elementos se acomoden en múltiples líneas si es necesario */
+  gap: 10px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+  flex-grow: 1; /* Toma el espacio restante en la fila */
+  flex-basis: 0; /* Se reduce si es necesario */
+  overflow: hidden; /* Evita desbordamiento del texto */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+header div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0; /* Evita que el contenido se comprima */
+}
+
+header p {
+  margin: 0;
+  font-size: 14px;
+  white-space: nowrap; /* Evita que el texto se parta */
+}
+
+header button {
+  padding: 8px 12px;
+  background-color: #ff4b5c;
+  border: none;
+  color: white;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  flex-shrink: 1; /* Se ajusta al espacio disponible */
+  max-width: 50%; /* Asegura que nunca salga del contenedor */
+  overflow: hidden; /* Evita que el texto desborde */
+  text-overflow: ellipsis; /* Muestra puntos suspensivos si el texto es muy largo */
+  white-space: nowrap;
+}
+
+header button:hover {
+  background-color: #e63946;
+}
+
+/* Navbar */
+nav {
+  background-color: #212121; /* Fondo diferente para el navbar */
+  color: white;
+  display: flex;
+  justify-content: center; /* Centra los elementos del navbar */
+  gap: 20px; /* Espaciado entre los enlaces */
+  padding: 10px 0; /* Espaciado vertical */
+  position: fixed; /* Fija el navbar justo debajo del encabezado */
+  top: 70px; /* Ajusta según la altura del encabezado */
+  left: 0;
+  width: 100%;
+  z-index: 999; /* Asegura que esté debajo del encabezado pero encima del contenido */
+  border-top: 2px solid #424242; /* Línea divisoria */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px; /* Espaciado entre elementos del navbar */
+}
+
+nav li {
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+nav li:hover {
+  background-color: #424242;
+}
+
+/* Contenido principal */
+main {
+  padding: 120px 20px; /* Deja espacio para el encabezado y el navbar */
+  background-color: #f5f5f5;
+  min-height: calc(100vh - 160px); /* Resta el alto del header y nav */
+}
+
+main h1 {
+  font-size: 24px;
+  color: #212121;
+}
+
+/* Responsivo */
+@media screen and (max-width: 768px) {
+  header {
+    flex-wrap: wrap; /* Acomoda los elementos en múltiples líneas en pantallas pequeñas */
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 20px; /* Reduce el tamaño del título */
+    flex-basis: 100%; /* Ocupa todo el ancho disponible */
+  }
+
+  header button {
+    font-size: 14px; /* Reduce el tamaño del texto del botón */
+    padding: 6px 10px;
+    max-width: 100%; /* Asegura que se adapte a pantallas pequeñas */
+  }
+
+  nav ul {
+    flex-wrap: wrap; /* Permite que el menú se acomode en pantallas pequeñas */
+    justify-content: space-evenly;
+  }
+}
+
+/* Estilo de botones interactivos */
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.nav-item:hover {
+  background-color: #424242;
+  transform: translateY(-3px) rotate(2deg);
+}
+
+/* Notificaciones */
+.notification-count {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-size: 14px;
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  transform: translate(50%, -50%);
+}
+
+/* Estilo de facturas vencidas */
+.facturas-vencidas-badge {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  margin-left: 5px;
+}
